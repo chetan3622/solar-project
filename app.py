@@ -2,27 +2,16 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# =====================================================
-# PAGE CONFIG
-# =====================================================
 st.set_page_config(
     page_title="Solar Power Prediction",
     page_icon="🌞",
     layout="wide"
 )
 
-# =====================================================
-# LOAD MODEL
-# =====================================================
 model = joblib.load("rf.joblib")
 
-# =====================================================
-# GLOBAL CSS (Z-INDEX + VISIBILITY FIXED)
-# =====================================================
 st.markdown("""
 <style>
-
-/* ---- FIX STREAMLIT TOP BAR (VERY IMPORTANT) ---- */
 header {
     z-index: 1000 !important;
     position: relative;
@@ -32,7 +21,6 @@ header {
     z-index: 1000 !important;
 }
 
-/* ---- BACKGROUND IMAGE ---- */
 .stApp {
     background: url("https://images.unsplash.com/photo-1509391366360-2e959784a276");
     background-size: cover;
@@ -40,12 +28,10 @@ header {
     background-attachment: fixed;
 }
 
-/* ---- TRANSPARENT OVERLAY FOR READABILITY ---- */
 .main {
     background: rgba(0,0,0,0.1);
 }
 
-/* ---- FIXED TITLE BAR ---- */
 .fixed-title {
     position: fixed;
     top: 45px;
@@ -63,30 +49,25 @@ header {
     z-index: 900;
 }
 
-/* ---- PAGE CONTENT SPACING ---- */
 .page-content {
     margin-top: 120px;
 }
 
-/* ---- SIDEBAR STYLE ---- */
 section[data-testid="stSidebar"] {
     background: rgba(0,0,0,0.45);
     backdrop-filter: blur(10px);
     width: 280px !important;
 }
 
-/* Sidebar toggle button */
 button[kind="header"] {
     z-index: 1000 !important;
 }
 
-/* ---- SIDEBAR TEXT ---- */
 section[data-testid="stSidebar"] * {
     color: white !important;
     font-size: 20px;
 }
 
-/* ---- GLASS CARD ---- */
 .glass-card {
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(10px);
@@ -98,13 +79,11 @@ section[data-testid="stSidebar"] * {
     margin: auto;
 }
 
-/* ---- INPUT FIELDS ---- */
 input {
     background-color: rgba(255,255,255,0.9) !important;
     color: black !important;
 }
 
-/* ---- PREDICTION RESULT ---- */
 .result-box {
     background: rgba(0,0,0,0.7);
     padding: 25px;
@@ -120,14 +99,8 @@ input {
 </style>
 """, unsafe_allow_html=True)
 
-# =====================================================
-# FIXED TITLE (VISIBLE ON ALL PAGES)
-# =====================================================
 st.markdown('<div class="fixed-title">🌞 Solar Power Generation Prediction</div>', unsafe_allow_html=True)
 
-# =====================================================
-# SIDEBAR NAVIGATION
-# =====================================================
 with st.sidebar:
     st.markdown("## 🔆 Navigation")
     page = st.radio(
@@ -136,12 +109,8 @@ with st.sidebar:
         index=0
     )
 
-# =====================================================
-# PAGE CONTENT
-# =====================================================
 st.markdown('<div class="page-content">', unsafe_allow_html=True)
 
-# ---------------- HOME ----------------
 if page == "🏠 Home":
     st.markdown("""
     <div class="glass-card">
@@ -158,7 +127,6 @@ if page == "🏠 Home":
     </div>
     """, unsafe_allow_html=True)
 
-# ---------------- ABOUT ----------------
 elif page == "📘 About":
     st.markdown("""
     <div class="glass-card">
@@ -171,7 +139,6 @@ elif page == "📘 About":
     </div>
     """, unsafe_allow_html=True)
 
-# ---------------- PREDICT ----------------
 elif page == "⚡ Predict":
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 
