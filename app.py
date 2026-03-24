@@ -139,7 +139,7 @@ elif page == "📘 About":
     </div>
     """, unsafe_allow_html=True)
 
-elif page == "⚡ Predict":
+elif page == "⚡ Result":
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 
     st.subheader("Enter Weather Parameters")
