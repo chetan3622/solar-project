@@ -99,7 +99,7 @@ input {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="fixed-title">🌞 Solar Power Generation Prediction</div>', unsafe_allow_html=True)
+st.markdown('<div class="fixed-title">🌞 Solar Power Prediction</div>', unsafe_allow_html=True)
 
 with st.sidebar:
     st.markdown("## 🔆 Navigation")
@@ -139,7 +139,7 @@ elif page == "📘 About":
     </div>
     """, unsafe_allow_html=True)
 
-elif page == "⚡ Result":
+elif page == "⚡ Prediction":
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
 
     st.subheader("Enter Weather Parameters")
