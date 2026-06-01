@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 st.set_page_config(
-    page_title="Solar Power Prediction",
+    page_title="Solar Power Predictions",
     page_icon="🌞",
     layout="wide"
 )
