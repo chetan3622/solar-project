@@ -111,7 +111,7 @@ with st.sidebar:
 
 st.markdown('<div class="page-content">', unsafe_allow_html=True)
 
-if page == "🏠 Home":
+if page == "🏠Home":
     st.markdown("""
     <div class="glass-card">
         <h2>Welcome to Solar Power Prediction</h2>
