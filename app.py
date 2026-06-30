@@ -102,7 +102,7 @@ input {
 st.markdown('<div class="fixed-title">🌞Solar Power Prediction</div>', unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("## 🔆 Navigation")
+    st.markdown("## 🔆Navigation")
     page = st.radio(
         "",
         ["🏠Home", "📘About", "⚡Predict"],
