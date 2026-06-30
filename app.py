@@ -154,7 +154,7 @@ elif page == "⚡ Prediction":
     avg_wind_speed = st.number_input("Average Wind Speed (Period)")
     avg_pressure = st.number_input("Average Pressure (Period)")
 
-    if st.button("🔮 Predict Power"):
+    if st.button("🔮Predict Power"):
         input_data = np.array([[distance_to_solar_noon, temperature, wind_direction,
                                 wind_speed, sky_cover, visibility,
                                 humidity, avg_wind_speed, avg_pressure]])
