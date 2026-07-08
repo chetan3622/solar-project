@@ -105,7 +105,7 @@ with st.sidebar:
     st.markdown("## 🔆Navigation")
     page = st.radio(
         "",
-        ["🏠Home", "📘About", "⚡Predict"],
+        ["🏠 Home", "📘About", "⚡Predict"],
         index=0
     )
 
