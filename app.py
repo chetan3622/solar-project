@@ -127,7 +127,7 @@ if page == "🏠 Home":
     </div>
     """, unsafe_allow_html=True)
 
-elif page == "📘 About":
+elif page == "📘About":
     st.markdown("""
     <div class="glass-card">
         <h2>About This Project</h2>
