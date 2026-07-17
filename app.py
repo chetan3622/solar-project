@@ -162,7 +162,7 @@ elif page == "⚡Prediction":
         prediction = model.predict(input_data)
 
         st.markdown(
-            f'<div class="result-box">⚡Solar Po: {prediction[0]:.2f} Units</div>',
+            f'<div class="result-box">⚡Solar Pow: {prediction[0]:.2f} Units</div>',
             unsafe_allow_html=True
         )
 
